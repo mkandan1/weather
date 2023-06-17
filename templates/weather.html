@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather in {{ city }}:</h1>
+    {% if error %}
+        <p>No weather data found for {{ city }}.</p>
+    {% else %}
+        <p>{{ temperature }}</p>
+        <p>{{ description }}</p>
+        <p>{{ uv_index }}</p>
+    {% endif %}
+</body>
+</html>
