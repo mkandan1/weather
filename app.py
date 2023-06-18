@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import python_weather
 import asyncio
 import os
@@ -14,8 +14,9 @@ async def get_weather(city):
 def home():
     return render_template('index.html')
 
-@app.route('/weather/<city>')
-def weather(city):
+@app.route('/weather.html')
+def weather():
+    city = request.args.get('city')
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     weather = loop.run_until_complete(get_weather(city))
@@ -24,7 +25,7 @@ def weather(city):
     if weather:
         temperature = f"Temperature: {weather.current.temperature}°F"
         description = f"Description: {weather.current.description}"
-        uv_index = f"Ultra violet: {weather.current.ultraviolet}UV"
+        uv_index = f"Ultra violet: {weather.current.wind_direction}UV"
         return render_template('weather.html', city=city, temperature=temperature, description=description, uv_index=uv_index)
     else:
         return render_template('weather.html', city=city, error=True)
