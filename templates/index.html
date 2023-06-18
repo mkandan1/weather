@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Weather App</title>
 </head>
+
 <body>
     <h1>Welcome to the Weather App!</h1>
     <p>Enter a city name to get the weather:</p>
-    <form action="./weather.html" method="GET">
-        <input type="text" name="city" required>
-        <input type="submit" value="Get Weather">
-    </form>
+    <div>
+        <input type="text" name="city" id="city" required>
+        <input type="submit" onclick="fetchReport()" value="Get Weather">
+        <br />
+        <br />
+        <span id="data"></span>
+    </div>
+    <script>
+        function fetchReport() {
+            let city = document.getElementById('city').value;
+            fetch('http://127.0.0.1:5000/fetchReport', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ city: city })
+            })
+                .then((res) => { return res.json() }).then((data) => {
+                    const data2 = JSON.stringify(data)
+                    document.getElementById('data').innerHTML = data2;
+                })
+        }
+    </script>
 </body>
 </html>
