@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify
 import python_weather
 import asyncio
 import os
-import pyttsx3
 
 app = Flask(__name__)
 
