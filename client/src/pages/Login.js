@@ -26,6 +26,7 @@ function Form() {
 
   return (
     <>
+    <body>
       <form className='form needs-validation m-5' noValidate onSubmit={handleSubmit}>
         <center>
           <p className="h1"><b>LOGIN</b></p>
@@ -45,8 +46,9 @@ function Form() {
           <input type="checkbox" className="form-check-input" id="exampleCheck1" required />
           <label className="form-check-label" htmlFor="exampleCheck1">I agree to the Terms & Conditions</label>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-light">Submit</button>
       </form>
+      </body>
     </>
   );
 }
