@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
+import {Link} from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -24,8 +25,8 @@ function Form() {
 
   return (
     <>
-    <body>
-      <form className='form needs-validation m-5' noValidate onSubmit={handleSubmit}>
+    <div className='login_form_wrapper ps-0 ps-md-5 justify-content-center justify-content-md-start'>
+      <form className='form needs-validation' noValidate onSubmit={handleSubmit}>
         <center>
           <p className="h1"><b>LOGIN</b></p>
           <br></br>
@@ -44,9 +45,13 @@ function Form() {
           <input type="checkbox" className="form-check-input" id="exampleCheck1" required />
           <label className="form-check-label" htmlFor="exampleCheck1">I agree to the Terms & Conditions</label>
         </div>
-        <button type="submit" className="btn btn-light">Submit</button>
+        <button type="submit" className="btn btn-full mt-3 btn-light" onClick={()=>Login}>Submit</button>
+
+        <div className='text-center mt-5'>
+          <span>Don't have an account? <Link to='/signup'>Sign Up</Link></span>
+        </div>
       </form>
-      </body>
+      </div>
     </>
   );
 }

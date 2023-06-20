@@ -7,7 +7,7 @@
     
 }
 
-body{
+.signup_form_wrapper{
     background-image: url('./images/Sign_bg1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -15,8 +15,64 @@ body{
     background-position: center;
     width: fit-content;
     border: none;
-    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
+
+.form_signup {
+    width: 20rem;
+    padding: 50px;
+    border: 1px solid #015369;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.23);
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.23);
+}
+
+.btn-full {
+    width: 100%;
+}
+
 #emailHelp{
     color: whitesmoke;
+}
+
+
+
+@media screen and (min-width: 320px){
+    .form_signup{
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 375px){
+    .form_signup{
+        width: 95vw;
+    }
+}
+
+@media screen and (min-width: 425px){
+    .form_signup{
+        width: 85vw;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .form_signup{
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .form_signup{
+        width: 33vw;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    .form_signup{
+        width: 25vw;
+    }
 }
