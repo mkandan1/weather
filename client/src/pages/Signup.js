@@ -56,8 +56,7 @@ function Form() {
         .then((user) => {
           const userId = user.user.uid;
           const db = getDatabase(app);
-          console.log(userId);
-          set(ref('https://weather-app-4f122-default-rtdb.firebaseio.com/', 'Users' + userId), {
+          set(ref(db, 'Users/' + userId), {
             name: name,
             email: email,
             phone_number: mobile
@@ -65,6 +64,8 @@ function Form() {
           .catch((err)=>{
             console.log(err.message);
           })
+
+          window.location.href = '/'
           
 
         })
