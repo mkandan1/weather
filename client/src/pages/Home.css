@@ -23,12 +23,12 @@
     width: 650px;
     height: 350px;
     background-color: transparent;
-    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.23);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     backdrop-filter: blur(14px);
     background-color: rgba(255, 255, 255, 0.632);
     border-radius: 15px;
 }
- input{
+#inputtext{
     color: black;
     border-bottom: 2px solid black;
     border-top: none;
@@ -36,7 +36,9 @@
     border-right: none;
     background-color: transparent;
     outline: none;
-    width: 500px;
+    width: 450px;
+    padding-bottom: 4px;
+    
     
 }
 .Inputfield{
@@ -44,8 +46,61 @@
     left: 50%;
     top: 33%;
     transform: translate(-50%, -50%);
+    height: auto;
 }
-.icon{
-    width: 100px;
 
+#check{
+    color: black;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0.5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+.weather{
+    position: fixed;
+    left: 35%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 11rem;
+    height: 9rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+    
+}
+.weather p{
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+}
+#condition{
+    font-size: 10px;
+
+}
+
+.extra{
+    position: fixed;
+    left: 60%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+    height: 9rem;
+
+}
+.extra p{
+    border: 2px solid black;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
 }
