@@ -116,9 +116,9 @@ function Container() {
               </div>
             </div>
             <div className='extra col-12 col-md-6 row mt-3 mt-md-0'>
-              <p>Feels Like : 82</p>
-              <p>Ultraviolet : low</p>
-              <p>Wind Speed : 4km/h</p>
+              <p>Feels Like : {feelslike} %</p>
+              <p>Ultraviolet : {ulv}</p>
+              <p>Wind Speed : {windSpeed} km/h</p>
             </div>
           </div>
         </> : <></>}
