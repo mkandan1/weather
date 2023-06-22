@@ -65,7 +65,9 @@ function Form() {
             console.log(err.message);
           })
 
-          window.location.href = '/'
+          setTimeout(()=>{
+            window.location.href = '/'
+          }, 2000)
           
 
         })
